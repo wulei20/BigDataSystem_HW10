@@ -176,23 +176,23 @@ def main():
     # triangle_topo_dict = get_triangle_topo(vertex_dict, edge_dict)
     # homonymous_topo_dict = get_homonymous_topo(vertex_dict, edge_dict)
     
-    # line_topo_dict = get_line_topo(vertex_dict, edge_dict)
-    # print(len(line_topo_dict))
-    # with open('line_topo.txt', 'w') as f:
-    #     for line_topo in line_topo_dict:
-    #         if line_topo_dict[line_topo] >= 10000:
-    #             f.write(str(line_topo) + ' ' + str(line_topo_dict[line_topo]) + '\n')
+    line_topo_dict = get_line_topo(vertex_dict, edge_dict)
+    print(len(line_topo_dict))
+    with open('output/line_topo.txt', 'w') as f:
+        for line_topo in line_topo_dict:
+            if line_topo_dict[line_topo] >= 10000:
+                f.write(str(line_topo) + ' ' + str(line_topo_dict[line_topo]) + '\n')
 
-    # cycle_with_edge_topo_dict = get_cycle_with_edge_topo(vertex_dict, edge_dict)
-    # print(len(cycle_with_edge_topo_dict))
-    # with open('cycle_with_edge_topo.txt', 'w') as f:
-    #     for cycle_with_edge_topo in cycle_with_edge_topo_dict:
-    #         if cycle_with_edge_topo_dict[cycle_with_edge_topo] >= 10000:
-    #             f.write(str(cycle_with_edge_topo) + ' ' + str(cycle_with_edge_topo_dict[cycle_with_edge_topo]) + '\n')
+    cycle_with_edge_topo_dict = get_cycle_with_edge_topo(vertex_dict, edge_dict)
+    print(len(cycle_with_edge_topo_dict))
+    with open('output/cycle_with_edge_topo.txt', 'w') as f:
+        for cycle_with_edge_topo in cycle_with_edge_topo_dict:
+            if cycle_with_edge_topo_dict[cycle_with_edge_topo] >= 10000:
+                f.write(str(cycle_with_edge_topo) + ' ' + str(cycle_with_edge_topo_dict[cycle_with_edge_topo]) + '\n')
 
     cycle_with_edge_in_topo_dict = get_cycle_with_edge_in_topo(vertex_dict, edge_dict, reversed_edge_dict)
     print(len(cycle_with_edge_in_topo_dict))
-    with open('cycle_with_edge_in_topo.txt', 'w') as f:
+    with open('output/cycle_with_edge_in_topo.txt', 'w') as f:
         for cycle_with_edge_in_topo in cycle_with_edge_in_topo_dict:
             if cycle_with_edge_in_topo_dict[cycle_with_edge_in_topo] >= 10000:
                 f.write(str(cycle_with_edge_in_topo) + ' ' + str(cycle_with_edge_in_topo_dict[cycle_with_edge_in_topo]) + '\n')
